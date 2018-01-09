@@ -1,4 +1,5 @@
 class TagKindsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   before_action :set_tag_kind, only: [:show, :update, :destroy]
 
   # GET /tag_kinds
